@@ -1,6 +1,6 @@
-## Storm 0.10 docker image ##
+# Storm 0.10 docker image #
 
-## How to Use ##
+### How to Use ###
 
 Create a docker-compose.yml file
 ```yaml
