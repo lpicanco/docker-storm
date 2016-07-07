@@ -1,4 +1,4 @@
-# Storm 0.10 docker image #
+# Storm 1.0.1 docker image #
 
 ### How to Use ###
 
