@@ -7,9 +7,9 @@ RUN apt-get update && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
   mkdir /var/run/sshd && \
   sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
-  wget -q -O - http://mirrors.sonic.net/apache/storm/apache-storm-0.10.0/apache-storm-0.10.0.tar.gz | tar -xzf - -C /opt
+  wget -q -O - http://mirrors.sonic.net/apache/storm/apache-storm-1.0.1/apache-storm-1.0.1.tar.gz | tar -xzf - -C /opt
 
-ENV STORM_HOME /opt/apache-storm-0.10.0
+ENV STORM_HOME /opt/apache-storm-1.0.1
 RUN groupadd storm; useradd --gid storm --home-dir /home/storm --create-home --shell \
   /bin/bash storm; chown -R storm:storm $STORM_HOME; mkdir /var/log/storm ; \
   chown -R storm:storm /var/log/storm
